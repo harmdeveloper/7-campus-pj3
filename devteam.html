@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevTeam</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+   
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+</head>
+<style>
+body{
+  font-family: "Poppins", sans-serif;
+    overflow-x: hidden;
+}
+
+/* topcontainer */
+.topcontainer{
+background-color: #142e51; 
+overflow: hidden;
+
+}
+.toplisitem{
+  color: white;
+  text-decoration: none;
+}
+.toplisitem:hover{
+  color: red;
+  text-decoration: none;
+}
+
+
+.top-list{
+list-style: none;
+color: white;
+}
+
+.toplisitembuton{
+  background-color:#981c1e  ;
+ 
+color: white;
+
+
+}
+
+.toplisitembuton:hover{
+    background-color: #010c1b;
+    color: white;
+}
+
+
+/* navbar   */
+    .navbar-nav {
+  
+  position: relative;
+  left: 12%;
+  
+  
+}
+.pgclogo{
+    width: 10%;
+}
+@media screen and (max-width:375px){
+
+    .pgclogo{
+    width: 40%;
+}
+
+}
+@media screen and (max-width:425px){
+
+.pgclogo{
+width: 30%;
+}
+
+}
+@media screen and (max-width:768px){
+
+.pgclogo{
+width: 25%;
+}
+
+}
+
+.nav-item{
+  color: black;
+}
+
+.nav-link:hover{
+ text-decoration-line: overline;
+ text-decoration-color: #981c1e;
+ color: #010c1b !important;
+}
+
+
+
+/* footer  */
+.ftr{
+  color: white;
+  background-image: linear-gradient(to right,  #1f3552 , #8c2b2d ,#1f3552);
+
+
+}
+.ftr-link{
+  color: white;
+  text-decoration: none;
+
+}
+.ftr-link:hover{
+  color: white;
+  text-decoration: none;
+  
+}
+.ftr-items{
+list-style: none;
+}
+.ftr-link1{
+  color:lightgray;
+  text-decoration: none;
+
+}
+.ftr-link1:hover{
+  color: white;
+  text-decoration: none;
+  
+}
+.copyright-text{
+  text-align: center;
+}
+fixed-top {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Adjust z-index as needed */
+}
+
+.navbar.scrolled {
+    background-color: #ffffff; /* Change background color when scrolled */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add shadow */
+}
+.m1{
+  width:100%;
+  height:100vh;
+}
+.port{
+  font-weight: bolder;
+  color:grey;
+}
+.port:hover{
+  text-decoration: none;
+  color:black;
+}
+
+.rowpic{
+    font-weight: 700;
+    text-align: center;
+    margin-top:-5%;
+    color:white;
+}
+
+
+.card {
+  position: relative;
+  border:none;
+}
+.card:hover{
+  transform: scale(1.1);
+}
+
+.card-body {
+  padding: 1rem;
+  background-color:white;
+  color:black;
+}
+
+.card-text {
+  display: block; 
+  font-weight:600;
+}
+
+
+/* Make it responsive */
+@media (max-width: 768px) {
+  .card {
+    flex-direction: column;
+  }
+  
+}
+.head{
+    padding-top:2%;
+    padding-left:4%;
+}
+.info{
+    padding:3%;
+    line-height:5vh;
+}
+
+</style>
+<body>
+
+  <!-- top bar -->
+    
+  <div class="container-fluid topcontainer p-1">
+    <div class="row">
+      <div class="col-xl-7 col-lg-7 col-md-7  col-sm-12 mt-3 ">
+        <ul>
+          <li class=" d-inline ml-3 top-list" >
+             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-open" viewBox="0 0 16 16">
+            <path d="M8.47 1.318a1 1 0 0 0-.94 0l-6 3.2A1 1 0 0 0 1 5.4v.817l5.75 3.45L8 8.917l1.25.75L15 6.217V5.4a1 1 0 0 0-.53-.882zM15 7.383l-4.778 2.867L15 13.117zm-.035 6.88L8 10.082l-6.965 4.18A1 1 0 0 0 2 15h12a1 1 0 0 0 .965-.738ZM1 13.116l4.778-2.867L1 7.383v5.734ZM7.059.435a2 2 0 0 1 1.882 0l6 3.2A2 2 0 0 1 16 5.4V14a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V5.4a2 2 0 0 1 1.059-1.765z"/>
+          </svg><a class="toplisitem" href="mailto:info@pgc.edu"><span class=" ml-3 mt-5"></span>info@pgc.edu </a>
+        </li>
+        <li class=" d-inline ml-3 top-list" >
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"/>
+          </svg>
+       <a class="toplisitem" href="tel:+92800-786-08"><span class=" ml-2 mt-5"></span>0800-786-08  </a>
+     </li>
+        </ul>
+      </div>
+    <div class="col-xl-5 col-lg-5 col-md-5  col-sm-12 mt-3   ">
+      <ul>
+        <li class=" d-inline ml-5 top-list" >
+          <a class="toplisitem" href=""><span class=" ml-3 mt-5"> Alumni</span> </a>
+      </li>
+  
+   <li class=" d-inline ml-3 top-list" >
+    
+ <a class="toplisitem" href="https://mcom.pgc.edu.pk/Student/StdLogin.jsp"><span class=" ml-2 mt-5"></span>Portal  </a>
+</li>
+<li class=" d-inline ml-3 top-list" >
+    
+<a class="btn toplisitembuton w-25  " href="tel:+92800-786-08 "><span class=""></span>Help </a>
+</li>
+
+
+
+      </ul>
+
+
+    </div>
+  </div>
+  </div>
+
+    <!-- nav bar -->
+    <nav class="navbar navbar-expand-lg navbar-light "id="navbar">
+        <!-- <div class="navbar-brand">punjab college</div> -->
+         
+         <img class="pgclogo" src="pgc.jpg" alt="">
+      <!-- <img class="navbar-brand w-25 h-25 " src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1tqnHNFTu1Pj53gR5blt9bz2e4wjAepe19g&s" alt=""> -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav ml-5  ">
+            <li class="nav-item ml-5 ">
+              <a class="nav-link " href="/pgcweb/pgc.html">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link  dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                Academic
+              </a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Computer Department</a>
+                <a class="dropdown-item" href="#">Mathametics Department</a>
+                <a class="dropdown-item" href="#">Social studies Department</a>
+                <a class="dropdown-item" href="#">Art Department</a>
+                <a class="dropdown-item" href="#">Chemistry Department</a>
+  
+              </div>
+            </li>
+  
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle " href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+               Pages
+              </a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">About</a>
+                <a class="dropdown-item" href="#">Blogs</a>
+                <a class="dropdown-item" href="#">Contact</a>
+                <a class="dropdown-item" href="#">Portfolio</a>
+                <a class="dropdown-item" href="#">Gallery</a>
+                <a class="dropdown-item" href="#">Pricing Table</a>
+  
+  
+  
+              </div>
+            </li>
+  
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle " href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                Admissions
+              </a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Apply to PGC</a>
+                <a class="dropdown-item" href="#">Campus Tour</a>
+                <a class="dropdown-item" href="#">Scholarships</a>
+                <a class="dropdown-item" href="#">Alumni</a>
+                <a class="dropdown-item" href="#">Event Calendar</a>
+  
+              </div>
+            </li>
+  
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle " href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                Courses
+              </a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Courses search</a>
+                <a class="dropdown-item" href="#">Courses List</a>
+                <a class="dropdown-item" href="#">single Course</a>
+              </div>
+            </li>
+  
+            <li class="nav-item ">
+              <a class="nav-link " href="/pgcweb/pgc.html">Athletics</a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link " href="/pgcweb/pgc.html">Campus Life</a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link" href="/pgcweb/pgc.html"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search text-dark" viewBox="0 0 16 16">
+                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+              </svg></a>
+            </li>
+          
+          </ul>
+        </div>
+      </nav>
+  <!-- banner  -->
+  <img class="m1" src="https://img.freepik.com/free-photo/group-people-working-team_23-2147656716.jpg?ga=GA1.1.1199042701.1718427422&semt=ais_user" alt="">
+  <!-- texton img -->
+      <div class="container-fluid">
+          <div class="rowpic"><h1>DevTrain Team</h1></div>
+      </div>
+      <!-- nav-bar of Portfolio -->
+      <div class="container-fluid  p-4">
+        <div class="d-flex justify-content-center flex-wrap">
+          <div class="p-3 flex-sm-50 flex-md-33">
+            <a class="port" href="./index.html">All</a>
+          </div>
+          <div class="p-3 flex-sm-50 flex-md-33">
+            <a class="port" href="./teachers.html">Teachers</a>
+          </div>
+          <div class="p-3 flex-sm-50 flex-md-33">
+            <a class="port" href="./our-team.html">Our team</a>
+          </div>
+          <div class="p-3 flex-sm-50 flex-md-33">
+            <a class="port" href="./fypteam.html">FYP Team</a>
+          </div>
+          <div class="p-3 flex-sm-50 flex-md-33">
+            <a class="port" href="./devteam.html">DevTrain Team</a>
+          </div>
+        </div>
+      </div>
+       <!-- paragraph -->
+        <div data-aos="fade-down">
+       <div class="container-fluid border shadow">
+          <div class="row p-3">
+          <h1 class="head">DevTrain</h1>
+              <p class="info" >
+                  Our team is united in our mission to deliver a top-notch project that exceeds expectations. We collaborate and support each other, leveraging our diverse skills and strengths to achieve a common goal. Through open communication, creative problem-solving, and a shared commitment to excellence, we strive to produce high-quality results that make a meaningful impact.
+                  <br>We embrace challenges, learn from failures, and celebrate successes together, constantly improving and growing as a cohesive unit. Our collective mission is to drive innovation, push boundaries, and create something truly remarkable that reflects our team's passion, dedication, and collective expertise.</p>
+          </div>
+      </div>
+    </div>
+    <!-- our team members -->
+    
+  <div class="container-fluid">
+    <div class="row">
+        <div class="col-xl-4 col-lg-4 col-md-6 p-4">
+            <div class="card border" >
+              <div data-aos="fade-right">
+                <img class="pic shadow" style="height:50vh;width:100%;" src="https://media.licdn.com/dms/image/D4E03AQE5tr5qBtPYPA/profile-displayphoto-shrink_200_200/0/1699931155991?e=2147483647&v=beta&t=9xbJeGLG4Ncu9Ipw_cVElo790pnGuuhLOpTHpQ6bWvM" alt="...">
+                <div class="card-body p-3">
+                  <p class="card-text">Zeeshan Akram<br>
+                    BMW(Boost Media Web Developer)<br>DevTrain Trainer</p>
+                </div>
+              </div> 
+            </div>              
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-6 p-4">
+            <div class="card border" >
+              <div data-aos="fade-down">
+                <img class="pic shadow" style="height:50vh;width:100%;"src="sir elisha.jpg" alt="...">
+                <div class="card-body p-3">
+                  <p class="card-text"> Elisha Lazar <br> FUll Stack Developer <br>DevTrain Trainer</p> 
+                </div>
+              </div>
+            </div>   
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-6 p-4">
+            <div class="card border" >
+              <div data-aos="fade-left">
+                <img class="pic shadow" style="height:50vh;width:100%;"src="https://ucp.edu.pk/wp-content/uploads/2019/01/Asif-Farooq-Lecturer.png" alt="...">
+                <div class="card-body p-3">
+                  <p class="card-text">Asif farooq </p>
+                </div>
+              </div>
+            </div>   
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-6 p-3 ">
+          <div class="card border" >
+            <div data-aos="fade-right">
+              <img class="pic shadow" style="height:50vh;width:100%;"src="https://devtrain.co/wp-content/uploads/2024/02/BXxivcnESyyA-Wnhh0iZOw-150x150.jpg" alt="...">
+              <div class="card-body p-3">
+                <p class="card-text">Muhammad Jamal <br> Web developer <br>DevTrain</p>
+              </div>
+            </div>
+          </div>   
+      </div>
+        <div class="col-xl-4 col-lg-4 col-md-6 p-3">
+            <div class="card border" >
+              <div data-aos="fade-down">
+                <img class="pic shadow" style="height:50vh;width:100%;"src="https://devtrain.co/wp-content/uploads/2024/02/0Mt3OJR5Seueiu_dCHVy7A-150x150.jpg" alt="...">
+                <div class="card-body p-3">
+                  <p class="card-text">Muhammad Ahamad <br> Flutter Developer <br>DevTrain</p>
+                </div>
+              </div> 
+            </div>              
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-6 p-3">
+            <div class="card border" >
+              <div data-aos="fade-left">
+                <img class="pic shadow" style="height:50vh;width:100%;"src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxAKEBAQEAgJCAgJCAoICAkJBw8ICQcWIB0iIiAdHx8kKDQsJCYxJx8fLTstMT01MDAwIys/QD84NzRBN0ABCgoKDQ0NFRAPFisZFhkrLS03LTctNysrNy03NzcrKysrNysrKy0tKysrKysrNysrKysrKysrKysrKysrKysrK//AABEIAMgAyAMBIgACEQEDEQH/xAAcAAABBQEBAQAAAAAAAAAAAAADAAECBAUGBwj/xAA7EAABBAAEBAQDBgQFBQAAAAABAAIDEQQSITEFQVFhEyJxgQaRsRQyQlJi8COhwdEHFUNy4XODkpPx/8QAGQEBAQEBAQEAAAAAAAAAAAAAAAECAwQF/8QAHhEBAAICAwEBAQAAAAAAAAAAAAECAxESITFRQRP/2gAMAwEAAhEDEQA/APPGIt0gMKIEDOSanpOGqwHCI1qiGo4boqoJCPEhf3R2BAQKQULrUmhzVeXEE6NFDrzKC094bua6dShHEtHIu06aKtlvnZ5myU4aOloicmPraK+tupTi4gw7gsPPTM1ALGn5fJVHVtYBBogikG7FK1+z2u9DaZxWBq3UGjyINFXMNxKtJBbds4GoQa7AjIULg4Ahwc0iwQbBRwEA3NtBLaVzIq8gr5oBUmcUSlBzUEAFIBINT0gYhJSpMgw2hECi1EWQlNoUQFMKwJtCM0WhNCPE1VTCJPYb2AFlHLVn4p9mgdAfN3QNJKX9m3oEzQohKR4YLJobnmURIEn96pSEM+9LHHzOeQArLk4m99thhvXKZCC7Kht4K+QeI55e8nM4HUlZ2ND7fh2mvtIc67NAlvzSndHLrHKx7xZLQcxcELD/AA86SiIc1EEEbFAxfA3RG2h7HC3AUQ5qnOGuMpl+l8v5qDtf3SrgvG9lwALrBtydslHXZwo9FvaL+Ax5w7tbdETT2Xdei6iGQSNDmnMxwtpHNcO80a5Vp3WpwDiBid4bj/CkNNs6MKiOqY5V51IlDeVRC01p05aggHUldqLgmaEEiknKSDGDUQMSY1Ga1FCyqTAiObSZoQSAR41ABFjCBTSZGk+w7rN77nc91Z4g/UN6DMVWagk0f3Kyp2ux0ojaaijNOcCArXEJ8jco1kkOUVuuw/w8+HQfO+LO8nMcw8oXLJkisN46TaQOEfDjg0CPDPqgCWNNv91oSfDM4FCB1b1k1C9SwuDDAAANB0pWfA01byory/2tL0/yrDyzh3CpoTVZNdW0XNC15eFh4BdE3OBRdlAC62bBNH4ddzyVWXDgcv6rhfJbbtXHV5rxzhERsiJrXOBDS3ykFcBjoDC6iNMxor2TjWCBB01DnOHdea8di1LSK1IJrX1XpwZN9S8+fFruHPufYvm3UJ5Ds4c6uuSg4ZSQdORHRKM2C3tYXreR2XDMT48TXX5qyv7FWCLWD8JzE+Izl5ZB25FdIxqsAGVTIUyExVEWx2n8JSYi0gqyMSRpAkgwWFWYwqjFbjUDSKEYtPIpRBVU6RogmATSPyNcejSQgzZX53uP6jSZzg0EnRrRZUYxz691Sxkple2Fupc4ZlJnUbPXQfBvAH8VmMroyYWOqOx5V7TwvhjcK0Na2yAL00Kx/g/CMwOFjByRNbG10jycoK6CHi+HJr7QwG61NL51pnJL3ViKQ0IB25Irx/woRzRu2mY70eCVKZw6/wA1qI1HbO9yozC/mqk7O39lfcL+VIGIaOq42jbtWXOY+MuG3YrjPiHgnjAkCn6gOrQr0DGPijBzzxsNEkOeAuax/E8NZH2hrhZaXDUNWqVtBe1Z6l5FxPCuhd5gQ8HK6xV9CqLTR9dCut+KQ2R1hzXtILQ4EELkZGltg7tNFe+ltw+feNS1PhiXJiaO0jHMH1/ou1AXneDl8KWN/wCWWMn5r0ZpXSGQnIaM9V37qoO0KRKCwp3FAnpId2kgwmbq23QKq0aqxeiBqtGjCE0IrEUcKvjz5K/M4Ao4KpY6TUN6Cygo4mYRtc47NaSAl8D4Q4vEhxGan53c1l8bxF1GDt5nrvf8J8AKdIRvlA0XDPbVHTDG7u1k4X9qoy4mSHDRgNhgjIaB3PdVMbgYHtMceIxReygfsxdIWetInxA6WMENiklsWQwlhcuZklxuHgixBxUkGDfiDHLhsDCwPw49+ZXlx8reTp7L8axuY2k/Dy4Z9Nx+JYbtnixmMldZ8PcUxDiGyS+OzQA7uC4zgIxuPjlkdJ40DJhHHHiWhkrx2I57Luvh3AeAM75GtY0ecyEMMPqmTlBTjPbfxM5iGY6aWV518WfFUpJjhlLDdEg0Su54vx/AysMbOJYR89ZaEwDT77LyefAF08he9zY/FDf4YzSP7DuVK1mJ7JtE16ZkWGnxriTPiZqPn8Fj3hnyWrhsBBEMr3z5yC0tkaWWtf4lwWIwOEidG+WPDvjlaMPw14jbhHaZczqJPO9lxckWJ8ESSYl7yXfcmcbeOxXeaz9cN1j8Q4thhC85JHPhcSC1xshY84za87yPW9HGcULykOEYBvW1i4huR5B2d5T+lbxz3pzyV63Ci7QdwQvRYJLa0/mja7+S86nFX1sA9l6DhB/Dj/6Mf0XeHEdzrQiLRWtU2sVUNgSeikUhOREQknpJBhtRbQSpsNqAzVJpSa1Rdoqo2bKCeQBJWJj8X4QLzq5xOUXuVoYyYNbqaFFzjewXIY/FGd1/gbowKAesjrJJLnW42vY/8KAPDLTu2TVeOYY6j1BXWcF41PgdYZcjqo+UOtcslJvGm8V+Ntvod2GbIKAbsQSQNVyHF8VhOH5gcZBnogxQSCZx9QP6rzHG/E+LxYqTGzvYd485ZGfYaLNdI5/P1WKYNey6Wz/Idbj/AIobdRMdkBtoldbW+w0WTi+Lz4v78z3sBtrLyxt9ANFmwwHcqwXNZz1XaKVhym9pQneWi7UMFxqXCOBa/QGy06tKHiZLG/8Aws95tamIn1ImY8d7hfiqLGANkecM/YkveIne41WhD8MfbPO04aWEm/EZiRiSvLHEj+is4Li02FOaOeWF+2aOQsK4WxfJda5p/YencQ4IzBsJFB+WzS8u4+Q156kkeq2H/GU72lsjxMKrMRT1znEMSJ3WA7MTpdU1THjtWe1yZK2jpF/nAP5hTvVegYeRr42OaczDG0tK88w7rBb2tvqul+E8WTmhJ0A8aLXbqu8PO6WJWcuiFGER7tFpVd5UCpO/qot1RDkJJymQc8NUWNiCxWYypAsRqMoThyr42XwmOfyYwkdEGD8Q4vXwwddDJXLsslkWnsoueZH5ibLn5nLQMVKejNjBvTQg2FtYCXOCL1oWFiyeVx5EHRX+GSuLtm5RoTVEINNp/fRHY8NVd4yntuOyTdVpViTEE7eiE4n97KTGIpjpBn4hx68jSqklX8SPoSqTwoiIkSJBUCFG6UDSKu51f0RHutVySfc+6A+GHPnuFs8EdkxMRG0jiw+4WXC2q9Fq8HaDPDfKdtKjuQovKKAoyBUVynjCTgh5qQTlKSgXWkgwWhGYEBuissIUUVgWZ8RPqEj80jWlaOZZHxE/+GBz8Zp+qI5+FllaxbYB6tBVPDM1C0cvlH6SQUgYeObTz3AKucJcMrx+IW710Q+KM+6fVpQcKSw2OYIPdBvnX5WEmNTNdYH+0FTaqozAq+LnI0HujB30QywPOv1QVXPsd6dfZVXOB+p1V+fDZGl17NcAOqzxGQNfVRA3KDlIlQcVAJ5+qZrPMPmovdqi4fXXvQQWWNWrwSIvniAG0okd+kDVZ8LbWjwDGCPFNBdlY9roSeWqqu3ukJ7rRSLQHhVA5ChormobtAgESkkCkgw2lFaUEGkRhtZ2LLXLB4rJ4pPQEZVryuytcf0mlhvNn6qiWGj20/krhGpH5mghDjNDulmNg8wbVFXGRZ2kcwMwWfButqYC+x1CxyzI8joTXdQasDtK5tFjVFY76/NU4n1R/ZVi+Y2NEKqPmUS+v/lqIcouP7tA+LxltrLpZHc6LNklLuVD5KzO4gXloCzfJUnuLvTl3UlDWhvdSkgSuUECbV3DtqlTjFlacDMos71p+lWA73ZRWxOh6hVg6jYNEGweiNMeXueyqzbH2ASR6JwXiP2qFrif4jR4cvqrhNrzrg3E5MK7ynNG4jOw/deu0wHEWYkW11OA80ZNOYg0Xf0Vd6JmtDcFQJydKkkGGpRoAKkH5dzXusA2L+470Cw5dCtDE4oOBA2sWeqqSNzC+2q0ICWqPKqPZWhqL7ad1nA1oemnQo2FmynKdr8vZUXZG+UdRfyWdi4S7zijlaMw2IV+R9kdKo90F3lP71UFSJytxHl7hVZY8mo+4Tr+lEif8xqEVa/solODm1G1fJJ2ioDO4aWLAJNE6FUXOza/LsrOIdenIaqo4rKIyvr1VerTvNo8EOb05oJYOHmRps3urxNC9+Q7qLRXy0Q5ZwO52AWgz9PU6lVJXcu9lHlfz20VNzr+ayDQ6kAK7FI6Nwc1xY8GwQaIQsHDQs89B3Rcqo6ThnGxJTZKZLsH7NkWsH2uHJAV7BcWkhoaSRjQNfdt90HVPSWfhOJsxGgtkn5Hbn0SVGNiJcg0+8TQ6hVHSEbmwdje6iLebOp/kEUVsRbeYUAXjMlFJk0P3eR6J3xFuo8zN+7VCwVQaWEO1A03LRu1VXNI+oKLHKWaH7vI/lVksbKOhr2KgHDLmH6hoUSUaA9ND3VORjoj9OjlYbMHN9vkqphr3FUR1QHsLNtWE6dkRrqU7B5WDoR1QRglo76HQ9kbEurbpv1VaSLLqNW/zaptfmbV6tBI7oK77o2egCqSuTyyFxO516aBNHCXHbnW26yhQRFx/ei0GMDRXL6qbIRENfvfi7KticRWg3VCxE9aDfb0Q4Ir1Op39EOFmY2ddbVmV+Qd60QVsW/WhyFFLCQeIejRqT0UYITM7QWSb7Ba7WCIZRrzcfzKBnUNBoAKHZAe9PLIq5NqqleY+6tNZQQ8PHzVh2nyQCJy6g04GwQaISQw7OewSVBgaT2oJgUBmOpNJCHajyu3PQqFqbX0gru00IopMeYz1Zf/AIq24NkFEUeTuYVaWIx7+ZnJwFhEW2yB4pwDmEe4VWfDGPzMd4kf4m/iYoGQNbYdz0AOqCcX3KgLmvVIOUGcSLfxGvmit4mDuGn1YCgk2T/lM9ljToQQpf5gw/6cR/7YTHiLR/ps/wDWEFQPazQtN7HqVbw3kGdwDXEfw2c2dyq8vESdmtaeoaGqnJM5+5PzQWsVjL0HzVaNhdqUooi7ZpJ7CytCDBO5gMH6jRUA425R7ILmGd1AEi1pnDMbu4v01ryNQZcQIxTWhg2OUUXKgkbW4dtAhzyPO7qgPltVnSkpZv7IHcbRYY7Q4mlx7K/EykEmtoeyq4iS9B6FExM2X15KvC3Mb7oDwsofVMjAJKqE1ykGXskkiGpK0kkUg5FZLXccwdQkkgZ8DJNcgvp90qu7BN5Eg9HBJJREDhK5A+hBS+xX+AD3ASSQL/Lv1Nb7gpf5aOczfYEpJIJt4fGN3vf6UwIrIImbRB3+4lySSulFOIDdqY3o0BoVaXHgc7KSSiA/ai/lQQnvtJJAzQiMjLkySgvQxUnmkyhOktDOJMh7XS0IYwAkkpAjK+tPmnSSVV//2Q==" alt="...">
+                <div class="card-body p-3">
+                  <p class="card-text">Sana Muneeb <br> Chief Executive Officer <br>DevTrain</p>
+                </div>
+              </div> 
+            </div>  
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-6 pb-5 p-3">
+            <div class="card border" >
+              <div data-aos="fade-right">
+                <img class="pic shadow" style="height:50vh;width:100%;"src="https://devtrain.co/wp-content/uploads/2024/02/Jgn3fDdySt6cix4TlA1Kdw-150x150.jpg" alt="...">
+                <div class="card-body p-3">
+                  <p class="card-text"> Aqsa Kareem <br> Data Engnieer<br>DevTrain</p>
+                </div>
+              </div> 
+              </div>  
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-6 pb-5 p-3">
+            <div class="card border" >
+              <div data-aos="fade-down">
+                <img class="pic shadow" style="height:50vh;width:100%;"src="https://devtrain.co/wp-content/uploads/2024/02/Ahmad-Irfan-Devtrain-300x300.jpg" alt="...">
+                <div class="card-body p-3">
+                  <p class="card-text">Ahmad Irfan <br>Mobile App Trainer from Techno craft<br>DevTrain Trainer</p>
+                </div>
+              </div>
+            </div>   
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-6 pb-5 p-3">
+            <div class="card border" >
+              <div data-aos="fade-left">
+                <img class="pic shadow" style="height:50vh;width:100%;"src="https://devtrain.co/wp-content/uploads/2024/02/Abdul-Rehman-Trainer-Devtrain-1-e1708688328768-297x300.jpg" alt="...">
+                <div class="card-body p-3">
+                  <p class="card-text">Abdul Rehman <br>
+                    Cyber Security Trainer<br>DevTrain Trainer</p>
+                </div>
+              </div>
+            </div>               
+        </div>
+    </div>
+   
+</div>
+      <!-- footer  -->
+      <div class="container-fluid p-5 ftr">
+        <div class="row">
+          <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12   ">
+            <img   class="w-25 d-inline" src="pgc-removebg-preview.png" alt="">
+    
+        <p class="mt-3 d-inline" style="font-size: 12px; text-align: left;">
+    
+            PUNJAB GROUP OF COLLEGES
+        </p>
+    
+           
+            <b><b><hr class="bg-danger mt-3"></b></b>
+      
+            <p class="mt-3">Plot 186,<br> Abu Bakar Block New Garden Town, <br> Lahore, Punjab  <br> 54000</p>
+            <a class="ftr-link" href="telto080078608">0800-786-08 </a> <br>
+            <a class="ftr-link mt-3" href="mailtoinfo@pgc.edu">info@pgc.edu</a>
+          </div>
+         
+          <div class="col-xl-3 col-lg-3 col-md-6  col-sm-12 p-4  ">
+            <ul>
+              <li class="ftr-items mt-4"><b>Our Campus</b></li>
+            <b><b><hr class="bg-danger mt-5"></b></b>
+      
+              <li class="ftr-items mt-3"><a href="#" class="ftr-link1" >Acedemic</a></li>
+              <li class="ftr-items mt-3"><a href="#" class="ftr-link1">Planning & Administration</a></li>
+              <li class="ftr-items mt-3"><a href="#" class="ftr-link1">Campus Safety</a></li>
+              <li class="ftr-items mt-3"><a href="#" class="ftr-link1">Office of the Chancellor</a></li>
+              <li class="ftr-items mt-3"><a href="#" class="ftr-link1">Facility Services</a></li>
+              <li class="ftr-items mt-3"><a href="#" class="ftr-link1">Human Resources</a></li>
+            </ul>
+          </div>
+          <div class="ccol-xl-3 col-lg-3 col-md-6  col-sm-12  p-4  ">
+            <ul>
+              <li class="ftr-items mt-4"><b>Campus Life</b></li>
+            <b><b><hr class="bg-danger mt-5"></b></b>
+      
+              <li class="ftr-items mt-3"><a href="#" class="ftr-link1" >Accessibility</a></li>
+              <li class="ftr-items mt-3"><a href="#" class="ftr-link1">Financial Aid</a></li>
+              <li class="ftr-items mt-3"><a href="#" class="ftr-link1">Financial Aid</a></li>
+              <li class="ftr-items mt-3"><a href="#" class="ftr-link1">Housing</a></li>
+              <li class="ftr-items mt-3"><a href="#" class="ftr-link1">Information Technologies</a></li>
+              <li class="ftr-items mt-3"><a href="#" class="ftr-link1">Student Life</a></li>
+            </ul>
+          </div>
+          <div class="col-xl-3 col-lg-3 col-md-6  col-sm-12  p-4 ">
+            <ul>
+              <li class="ftr-items mt-4"><b>Academics</b></li>
+            <b><b><hr class="bg-danger mt-5"></b></b>
+      
+              <li class="ftr-items mt-3"><a href="#" class="ftr-link1" >Canvas</a></li>
+              <li class="ftr-items mt-3"><a href="#" class="ftr-link1">Catalyst</a></li>
+              <li class="ftr-items mt-3"><a href="#" class="ftr-link1">Library</a></li>
+              <li class="ftr-items mt-3"><a href="#" class="ftr-link1">Time Schedule</a></li>
+              <li class="ftr-items mt-3"><a href="#" class="ftr-link1">Apply For Admissions</a></li>
+              <li class="ftr-items mt-3"><a href="#" class="ftr-link1">Pay My Tuition</a></li>
+            </ul>
+          </div>
+      
+        </div>
+        <b><b><hr class="bg-danger mt-3"></b></b>
+      
+      
+        <div class="row">
+          <div class="col mt-5 copyright-text ">© Copyright 2024 DevDevelopers All rights reserved.</div>
+      </div>
+      </div>
+
+
+
+      <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+      <script>
+        AOS.init();
+    document.addEventListener('DOMContentLoaded', function() {
+        // Get the navbar element
+        const navbar = document.getElementById('navbar');
+
+        // Function to toggle classes based on scroll
+        function toggleNavbarClass() {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled', 'fixed-top');
+            } else {
+                navbar.classList.remove('scrolled', 'fixed-top');
+            }
+        }
+
+        // Initial call to set navbar class based on initial scroll position
+        toggleNavbarClass();
+
+        // Add scroll event listener to window
+        window.addEventListener('scroll', toggleNavbarClass);
+    });
+      </script>
+      
+      </body>
+      <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+      
+      </html>
